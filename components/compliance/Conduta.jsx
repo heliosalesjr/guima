@@ -6,7 +6,7 @@ const Conduta = () => {
   return (
     <div>
       <h2 className="text-3xl font-bold my-6 text-center">Nosso Programa de Compliance e Código de Conduta</h2>
-      <div className="flex flex-col md:flex-row w-full">
+      <div className="flex flex-col md:flex-row w-full items-center">
         {/* Parte 1: Título, subtítulo e parágrafo */}
         <div className="w-full md:w-1/3 p-6 text-center md:text-left">
           

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const Regras = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -25,7 +26,7 @@ const Regras = () => {
       text: "Os integrantes se comprometem a informar a seus parceiros comerciais, clientes, fornecedores e agentes públicos com quem interagem sobre as normas e os princípios éticos aqui contidos, para que sejam praticados em toda a sua cadeia de negócios. ",
     },
     {
-      image: "/img/hands2.jpg",
+      image: "/img/Classroom.jpg",
       title: "EMBASAMENTO LEGAL DO DOCUMENTO",
       text: "LEI No 12.846/2013 (Lei Anticorrupção) e e DECRETO No 11.129/2022 (decreto regulamentador). Ainda: LEI No 12.813/2013 – Lei de conflito de Interesses, LEI No 14.133/20121 – Nova Lei de Licitações e Contratos Administrativos, CÓDIGO PENAL – Decreto-Lei no 2.848, de 7 de dezembro de 1940, LEI No 8.429/1992 – Lei de Improbidade Administrativa e DECRETO No 10.889/2021, que regulamenta as audiências de agentes públicos.",
     },
@@ -77,6 +78,14 @@ const Regras = () => {
             }`}
           />
         ))}
+      </div>
+      <div className="text-center p-6">
+        <p className="text-lg text-gray-700 mb-4">
+          Você pode baixar o nosso documento de Compliance completo clicando no botão abaixo:
+        </p>
+        <Button className="bg-blue-700 hover:bg-blue-900 text-white">
+          Download
+        </Button>
       </div>
     </div>
   );

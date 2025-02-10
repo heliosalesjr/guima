@@ -13,11 +13,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <Navbar />
+      
       <Hero />
-      <FeatureHighlight />
+      <About />
+      
       <Compliance />
       <Features />
-      <About />
+      
       <Testimonials />
       <Contact />
       <Mapa />

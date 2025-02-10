@@ -13,13 +13,14 @@ export default function Navbar() {
             Compliance
           </a>
           <a href="#about" className="text-gray-600 hover:text-gray-900">
-            About
+            Sobre
           </a>
-          <a href="#testimonials" className="text-gray-600 hover:text-gray-900">
-            Testimonials
-          </a>
+         
           <a href="#contact" className="text-gray-600 hover:text-gray-900">
-            Contact
+            Contato
+          </a>
+          <a href="#mapa" className="text-gray-600 hover:text-gray-900">
+            Mapa
           </a>
         </div>
         <Button variant="outline" className="md:hidden">
