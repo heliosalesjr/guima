@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
-import Conduta from "./Conduta";
-import Combate from "./Combate";
-import Regras from "./Regras";
+import Conduta from "./compliance/Conduta";
+import Combate from "./compliance/Combate";
+import Regras from "./compliance/Regras";
 
 const Compliance = () => {
   return (

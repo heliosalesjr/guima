@@ -3,6 +3,14 @@ import React from "react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const Conduta = () => {
+
+  const items = [
+    { title: "1", description: "Conteúdo detalhado do item 1." },
+    { title: "2", description: "Conteúdo detalhado do item 2." },
+    { title: "3", description: "Conteúdo detalhado do item 3." },
+    { title: "4", description: "Conteúdo detalhado do item 4." },
+  ];
+
   return (
     <div className="flex w-full">
       {/* Parte 1: Título, subtítulo e parágrafo */}
@@ -17,14 +25,14 @@ const Conduta = () => {
       {/* Parte 2: Accordion */}
       <div className="w-2/3 p-6">
         <Accordion type="single" collapsible>
-          {[1, 2, 3, 4].map((item) => (
-            <AccordionItem key={item} value={`item-${item}`}>
+          {items.map((item, index) => (
+            <AccordionItem key={index} value={`item-${index + 1}`}>
               <AccordionTrigger className="text-lg font-semibold">
-                Título do Item {item}
+                {item.title}
               </AccordionTrigger>
               <AccordionContent>
                 <p className="text-gray-600">
-                  Conteúdo detalhado do item {item}.
+                  {item.description}
                 </p>
               </AccordionContent>
             </AccordionItem>
