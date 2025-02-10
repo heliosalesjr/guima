@@ -9,8 +9,8 @@ export default function Navbar() {
           <a href="#home" className="text-gray-600 hover:text-gray-900">
             Home
           </a>
-          <a href="#features" className="text-gray-600 hover:text-gray-900">
-            Features
+          <a href="#compliance" className="text-gray-600 hover:text-gray-900">
+            Compliance
           </a>
           <a href="#about" className="text-gray-600 hover:text-gray-900">
             About

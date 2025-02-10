@@ -1,59 +1,73 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Regras = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const items = [
     {
-      image: "https://via.placeholder.com/150",
-      title: "Item 1",
-      text: "Texto do item 1.",
+      image: "/img/hands1.jpg",
+      title: "RELACIONAMENTO COM CONCORRENTES",
+      text: "A Guima repudia qualquer forma de restrição ao livre-comércio ou à livre concorrência, em especial a formação de cartel, fraudes a licitações e abusos de poder. Estamos comprometidos com o fiel cumprimento das leis que regem a concorrência em nosso país, adotando a qualidade técnica de nossos produtos e serviços como o único motivador para nossas vendas.",
     },
     {
-      image: "https://via.placeholder.com/150",
-      title: "Item 2",
-      text: "Texto do item 2.",
+      image: "/img/hands2.jpg",
+      title: "RELACIONAMENTO COM FORNECEDORES",
+      text: "Os fornecedores da Guima devem demonstrar: plena capacidade técnica para executar o que propõe, a prática de preços totalmente adequados, conduta profissional absolutamente idônea, baseada no cumprimento de leis e de altos padrões éticos.",
     },
     {
-      image: "https://via.placeholder.com/150",
-      title: "Item 3",
-      text: "Texto do item 3.",
+      image: "/img/hands3.jpg",
+      title: "RELACIONAMENTO COM AGENTES PÚBLICOS",
+      text: "A Guima, no ato das pessoas físicas que a representam, estão proibidas de prometer, oferecer ou dar, direta ou indiretamente, qualquer pagamento ou outra vantagem indevida a agente público, a terceiro a ele relacionado ou a uma pessoa física ou jurídica privada, visando à obtenção de qualquer favorecimento ou expectativa de favorecimento.",
     },
     {
-      image: "https://via.placeholder.com/150",
-      title: "Item 4",
-      text: "Texto do item 4.",
+      image: "/img/hands1.jpg",
+      title: "PROPAGAÇÃO DA EXISTÊNCIA DO CÓDIGO PARA TERCEIROS",
+      text: "Os integrantes se comprometem a informar a seus parceiros comerciais, clientes, fornecedores e agentes públicos com quem interagem sobre as normas e os princípios éticos aqui contidos, para que sejam praticados em toda a sua cadeia de negócios. ",
     },
     {
-      image: "https://via.placeholder.com/150",
-      title: "Item 5",
-      text: "Texto do item 5.",
+      image: "/img/hands2.jpg",
+      title: "EMBASAMENTO LEGAL DO DOCUMENTO",
+      text: "LEI No 12.846/2013 (Lei Anticorrupção) e e DECRETO No 11.129/2022 (decreto regulamentador). Ainda: LEI No 12.813/2013 – Lei de conflito de Interesses, LEI No 14.133/20121 – Nova Lei de Licitações e Contratos Administrativos, CÓDIGO PENAL – Decreto-Lei no 2.848, de 7 de dezembro de 1940, LEI No 8.429/1992 – Lei de Improbidade Administrativa e DECRETO No 10.889/2021, que regulamenta as audiências de agentes públicos.",
     },
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [items.length]);
+
   return (
     <div className="w-full p-6 text-center">
-      <h2 className="text-2xl font-bold mb-4">Regras</h2>
-      <h3 className="text-lg font-semibold mb-4">Subtítulo</h3>
+      <h2 className="text-3xl font-bold mb-4">Comportamentos</h2>
+     
       <p className="text-gray-600 mb-8">
-        Este é um parágrafo explicativo sobre as regras.
+        É proibido exercer atividades relacionadas à empresa sob efeito de álcool ou drogas, ou permanecer no ambiente de trabalho alterado por essas substâncias. É proibido portar armas nas dependências da empresa ou em eventos profissionais. É proibido trocar, armazenar ou utilizar conteúdo obsceno, pornográfico, violento, discriminatório, racista ou difamatório.
       </p>
-      <div className="relative w-full overflow-hidden">
-        <motion.div
-          className="flex"
-          style={{ width: `${items.length * 100}%`, x: `-${activeIndex * 100}%` }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        >
-          {items.map((item, index) => (
-            <div key={index} className="w-full flex-shrink-0 p-4">
-              <img src={item.image} alt={item.title} className="mx-auto mb-4" />
-              <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-              <p className="text-gray-600">{item.text}</p>
+      <div className="relative w-full h-[400px] overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeIndex}
+            className="absolute w-full h-full "
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <img
+              src={items[activeIndex].image}
+              alt={items[activeIndex].title}
+              className="w-full h-[400px] object-cover rounded-xl"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-slate-600 bg-opacity-80 p-4 text-white rounded-xl">
+              <h4 className="text-xl font-semibold mb-2">{items[activeIndex].title}</h4>
+              <p className="text-gray-200">{items[activeIndex].text}</p>
             </div>
-          ))}
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
       </div>
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center mt-6 ">
         {items.map((_, index) => (
           <button
             key={index}

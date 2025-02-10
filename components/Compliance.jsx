@@ -6,7 +6,7 @@ import Regras from "./compliance/Regras";
 
 const Compliance = () => {
   return (
-    <div className="max-w-5xl mx-auto py-16 px-4">
+    <div className="max-w-5xl mx-auto py-16 px-4" id="compliance">
       <Conduta />
       <Combate />
       <Regras />

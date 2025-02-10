@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
 import Compliance from "@/components/Compliance"
+import Mapa from "@/components/Mapa"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <Testimonials />
       <Contact />
+      <Mapa />
       <Footer />
     </div>
   )
