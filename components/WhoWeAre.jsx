@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Linkedin } from "lucide-react"
 
-import solarImage from "../public/img/edmar.avif"; 
+import solarImage from "../public/img/edmar.png"; 
 
 const WhoWeAre = () => {
   return (
