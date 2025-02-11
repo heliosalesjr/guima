@@ -8,6 +8,8 @@ import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
 import Compliance from "@/components/Compliance"
 import Mapa from "@/components/Mapa"
+import WhoWeAre from "@/components/WhoWeAre"
+import Contact2 from "@/components/Contact2"
 
 export default function Home() {
   return (
@@ -16,12 +18,11 @@ export default function Home() {
       
       <Hero />
       <About />
-      
+      <WhoWeAre />
       <Compliance />
-      <Features />
       
-      <Testimonials />
-      <Contact />
+      
+      <Contact2 />
       <Mapa />
       <Footer />
     </div>
