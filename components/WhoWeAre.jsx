@@ -7,7 +7,7 @@ import solarImage from "../public/img/edmar.png";
 
 const WhoWeAre = () => {
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-100" id="sobre">
         <div className=" flex flex-col lg:flex-row items-center lg:items-stretch max-w-6xl mx-auto min-h-[80vh] py-20 px-6 gap-12">
         {/* Coluna Direita */}
         <div className="lg:w-1/2 w-full flex justify-center items-center">

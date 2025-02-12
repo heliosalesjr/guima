@@ -5,9 +5,7 @@ export default function Hero() {
   return (
     <section id="home" className="animated-gradient h-[70vh] flex items-center justify-center relative overflow-hidden">
       {/* Círculos no fundo */}
-      <div className=" absolute inset-0 z-0 items-center justify-center flex">
-        
-      </div>
+      
 
       {/* Conteúdo do Hero */}
       <div class="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
