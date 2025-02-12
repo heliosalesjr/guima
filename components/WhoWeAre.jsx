@@ -45,7 +45,7 @@ const WhoWeAre = () => {
                 { number: "25+", title: "Mais de 25 anos de experiência no mercado nacional." },
                 { number: "50+", title: "Soluções personalizadas entregues em 2024" },
                 { number: "500+", title: "Clientes atendidos em todo o Brasil." },
-                { number: "100%", title: "Focada em soluções personalizadas." },
+                { number: "100%", title: "Focado em soluções personalizadas." },
                 ].map((item, index) => (
                 <div
                     key={index}

@@ -1,6 +1,6 @@
 const Mapa = () => {
     return (
-      <div className="w-full max-w-4xl mx-auto text-center py-12">
+      <div className="w-full max-w-4xl mx-auto text-center py-12" id="mapa">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">Onde estamos</h2>
         <p className="text-gray-600 mb-6">
           Venha nos visitar! Estamos localizados no coração de São Paulo.

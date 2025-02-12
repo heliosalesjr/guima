@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-slate-100">
+    <section id="sobre" className="py-16 bg-slate-100">
       <div className="container mx-auto px-4 text-center">
         {/* Título e Descrição */}
         <div className="max-w-4xl mx-auto">

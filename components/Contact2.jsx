@@ -42,12 +42,13 @@ export function Contact2() {
         <>
             <section
                 className="relative contact-container flex justify-center items-center"
+                id='contato'
                 style={{
                     backgroundImage: "url('img/call3.jpg')", // Caminho da sua imagem
                     backgroundSize: "cover",  // Faz a imagem cobrir todo o fundo
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    minHeight: "100vh", // Ocupa toda a altura da tela
+                    minHeight: "80vh", // Ocupa toda a altura da tela
                 }}
             >
                 {/* Camada de cor sobre a imagem para melhorar a legibilidade */}

@@ -6,27 +6,27 @@ const Regras = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const items = [
     {
-      image: "/img/hands1.jpg",
+      image: "/img/concorrentes.jpg",
       title: "RELACIONAMENTO COM CONCORRENTES",
       text: "A Guima repudia qualquer forma de restrição ao livre-comércio ou à livre concorrência, em especial a formação de cartel, fraudes a licitações e abusos de poder. Estamos comprometidos com o fiel cumprimento das leis que regem a concorrência em nosso país, adotando a qualidade técnica de nossos produtos e serviços como o único motivador para nossas vendas.",
     },
     {
-      image: "/img/hands2.jpg",
+      image: "/img/fornecedores.jpg",
       title: "RELACIONAMENTO COM FORNECEDORES",
       text: "Os fornecedores da Guima devem demonstrar: plena capacidade técnica para executar o que propõe, a prática de preços totalmente adequados, conduta profissional absolutamente idônea, baseada no cumprimento de leis e de altos padrões éticos.",
     },
     {
-      image: "/img/hands3.jpg",
+      image: "/img/agentespublicos.jpg",
       title: "RELACIONAMENTO COM AGENTES PÚBLICOS",
       text: "A Guima, no ato das pessoas físicas que a representam, estão proibidas de prometer, oferecer ou dar, direta ou indiretamente, qualquer pagamento ou outra vantagem indevida a agente público, a terceiro a ele relacionado ou a uma pessoa física ou jurídica privada, visando à obtenção de qualquer favorecimento ou expectativa de favorecimento.",
     },
     {
-      image: "/img/hands1.jpg",
+      image: "/img/terceiros.jpeg",
       title: "PROPAGAÇÃO DA EXISTÊNCIA DO CÓDIGO PARA TERCEIROS",
       text: "Os integrantes se comprometem a informar a seus parceiros comerciais, clientes, fornecedores e agentes públicos com quem interagem sobre as normas e os princípios éticos aqui contidos, para que sejam praticados em toda a sua cadeia de negócios. ",
     },
     {
-      image: "/img/Classroom.jpg",
+      image: "/img/legal.jpg",
       title: "EMBASAMENTO LEGAL DO DOCUMENTO",
       text: "LEI No 12.846/2013 (Lei Anticorrupção) e e DECRETO No 11.129/2022 (decreto regulamentador). Ainda: LEI No 12.813/2013 – Lei de conflito de Interesses, LEI No 14.133/20121 – Nova Lei de Licitações e Contratos Administrativos, CÓDIGO PENAL – Decreto-Lei no 2.848, de 7 de dezembro de 1940, LEI No 8.429/1992 – Lei de Improbidade Administrativa e DECRETO No 10.889/2021, que regulamenta as audiências de agentes públicos.",
     },

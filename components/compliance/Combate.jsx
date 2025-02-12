@@ -41,9 +41,9 @@ licitatórios públicos e/ou contratos públicos.</p>
             transition={{ duration: 0.5, delay: index * 0.2 }}
             className="p-6 border rounded-lg shadow-sm"
           >
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 text-blue-700 pr-8">
               {card.icon}
-              <h4 className="text-xl font-semibold ml-2">{card.title}</h4>
+              <h4 className="text-xl font-semibold text-slate-600 ml-2">{card.title}</h4>
             </div>
             <p className="text-gray-600">{card.text}</p>
           </motion.div>
