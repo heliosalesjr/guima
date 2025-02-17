@@ -3,7 +3,7 @@ import Circles from "./Circles";
 
 export default function Hero() {
   return (
-    <section id="home" className="animated-gradient h-[70vh] flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="animated-gradient h-[70vh] pt-16 flex items-center justify-center relative overflow-hidden">
       {/* Círculos no fundo */}
       
 
@@ -11,7 +11,7 @@ export default function Hero() {
       <div class="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
         <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-          Anunciamos nosso novo programa de compliance. <a href="#compliance" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Acesse aqui <span aria-hidden="true">&rarr;</span></a>
+          Entre em contato conosco pelo botão do Whatzapp ou <a href="#contato" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>acesse aqui <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
       <div class="text-center">

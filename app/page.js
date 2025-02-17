@@ -10,6 +10,7 @@ import Compliance from "@/components/Compliance"
 import Mapa from "@/components/Mapa"
 import WhoWeAre from "@/components/WhoWeAre"
 import Contact2 from "@/components/Contact2"
+import WhoWeAreMa from "@/components/WhoWeAreMa"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <About />
       <WhoWeAre />
+      <WhoWeAreMa />
       <Compliance />
       
       

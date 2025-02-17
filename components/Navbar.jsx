@@ -41,11 +41,17 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white bg-opacity-90 z-50 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div>
-          <Link href="/">
-            <img src="/img/GuimaLogoNav.png" alt="Logo GUIMA" className="h-8" />
-          </Link>
-        </div>
+      <div className="relative flex items-center">
+        <Link href="/">
+          <img
+            src="/img/logonav.png"
+            alt="Logo GUIMA"
+            className="h-16 md:h-20 -my-4"
+          />
+        </Link>
+      </div>
+
+
 
 
         {/* Menu Desktop */}

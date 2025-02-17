@@ -28,7 +28,7 @@ const WhoWeAre = () => {
             <h2 className="text-3xl font-semibold text-gray-800">
             <span className="font-black">Edmar Diogo </span>
             <span className="text-sky-700 font-bold">|</span>
-            <span className="text-blue-700"> Diretor Executivo de Operações</span>
+            <span className="text-blue-700">Cofundador e CEO</span>
             </h2>
             
             {/* Botão com espaçamento responsivo */}
