@@ -40,10 +40,10 @@ const WhoWeAreMa = () => {
             {/* Cards com espaçamento menor em mobile */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { number: "25+", title: "Mais de 25 anos de experiência no mercado nacional." },
-                { number: "50+", title: "Soluções personalizadas entregues em 2024" },
-                { number: "500+", title: "Clientes atendidos em todo o Brasil." },
-                { number: "100%", title: "Focado em soluções personalizadas." },
+                { number: "20+", title: "coordenando processos jurídicos complexos, incluindo M&A e IPO." },
+                { number: "10+", title: "A mais de 10 anos certificada em programas de compliance e integridades." },
+                { number: "5+", title: "5 anos de experiencia na área comercial e atendimento ao cliente." },
+                { number: "100%", title: "Focada em atendimento seguro e personalizado." },
               ].map((item, index) => (
                 <div
                   key={index}
