@@ -41,18 +41,15 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white bg-opacity-90 z-50 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div className="relative flex items-center">
-        <Link href="/">
-          <img
-            src="/img/logonav.png"
-            alt="Logo GUIMA"
-            className="h-16 md:h-20 -my-4"
-          />
-        </Link>
-      </div>
-
-
-
+        <div className="relative flex items-center">
+          <Link href="/">
+            <img
+              src="/img/logonav.png"
+              alt="Logo GUIMA"
+              className="h-16 md:h-20 -my-4"
+            />
+          </Link>
+        </div>
 
         {/* Menu Desktop */}
         <div className="hidden md:flex space-x-6">
@@ -60,8 +57,10 @@ export default function Navbar() {
             <Link
               key={item}
               href={`#${item}`}
-              className={`text-gray-600 hover:text-gray-900 transition-all ${
-                activeSection === item ? "font-black underline" : ""
+              className={`text-gray-600 hover:text-gray-900 transition-all text-lg tracking-wider ${
+                activeSection === item
+                  ? "font-black underline decoration-blue-500 decoration-4"
+                  : ""
               }`}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -83,8 +82,10 @@ export default function Navbar() {
               <Link
                 key={item}
                 href={`#${item}`}
-                className={`text-gray-600 hover:text-gray-900 transition-all ${
-                  activeSection === item ? "font-black underline" : ""
+                className={`text-gray-600 hover:text-gray-900 transition-all text-lg tracking-wider ${
+                  activeSection === item
+                    ? "font-black underline decoration-blue-500 decoration-4"
+                    : ""
                 }`}
                 onClick={() => setIsOpen(false)}
               >
