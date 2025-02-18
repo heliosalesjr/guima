@@ -1,0 +1,17 @@
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+    .regras-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .regras-container > div {
+      width: 100% !important;
+      height: 100px; /* Altura dos itens em telas menores */
+      flex-shrink: 0; /* Impede que os itens encolham */
+    }
+  
+    .regras-container > div.active {
+      height: 300px; /* Altura do item ativo em telas menores */
+    }
+  }

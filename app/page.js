@@ -11,6 +11,7 @@ import Mapa from "@/components/Mapa"
 import WhoWeAre from "@/components/WhoWeAre"
 import Contact2 from "@/components/Contact2"
 import WhoWeAreMa from "@/components/WhoWeAreMa"
+import FloatingWhatsAppButton from "@/components/Whatzapp"
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Contact2 />
       <Mapa />
       <Footer />
+      <FloatingWhatsAppButton />
     </div>
   )
 }
