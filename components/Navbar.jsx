@@ -14,6 +14,15 @@ export default function Navbar() {
     setIsOpen(!isOpen)
   }
 
+  // Função para fazer scroll suave até a seção (sem TypeScript)
+  const handleScroll = (id) => {
+    const section = document.getElementById(id)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
+      setIsOpen(false) // Fecha o menu no mobile
+    }
+  }
+
   // Detecta qual seção está visível
   useEffect(() => {
     const handleScroll = () => {
@@ -54,9 +63,9 @@ export default function Navbar() {
         {/* Menu Desktop */}
         <div className="hidden md:flex space-x-6">
           {["home", "sobre", "compliance", "contato", "mapa"].map((item) => (
-            <Link
+            <button
               key={item}
-              href={`#${item}`}
+              onClick={() => handleScroll(item)}
               className={`text-gray-600 hover:text-gray-900 transition-all text-lg tracking-wider ${
                 activeSection === item
                   ? "font-black underline decoration-blue-500 decoration-4"
@@ -64,7 +73,7 @@ export default function Navbar() {
               }`}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
-            </Link>
+            </button>
           ))}
         </div>
 
@@ -79,18 +88,17 @@ export default function Navbar() {
         <div className="md:hidden bg-white shadow-lg absolute top-16 left-0 right-0">
           <div className="flex flex-col items-center space-y-4 py-4">
             {["home", "sobre", "compliance", "contato", "mapa"].map((item) => (
-              <Link
+              <button
                 key={item}
-                href={`#${item}`}
+                onClick={() => handleScroll(item)}
                 className={`text-gray-600 hover:text-gray-900 transition-all text-lg tracking-wider ${
                   activeSection === item
                     ? "font-black underline decoration-blue-500 decoration-4"
                     : ""
                 }`}
-                onClick={() => setIsOpen(false)}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
-              </Link>
+              </button>
             ))}
           </div>
         </div>

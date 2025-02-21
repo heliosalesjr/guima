@@ -90,7 +90,7 @@ export default function Regras() {
                   <motion.p
                     className="absolute bottom-5 left-5 right-5 text-white transition-opacity"
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.3 } }}
                     exit={{ opacity: 0 }}
                   >
                     {item.text}

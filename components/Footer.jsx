@@ -1,7 +1,44 @@
+"use client";
+
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import { FaLinkedin, FaInstagram } from "react-icons/fa"
 
 export default function Footer() {
+  const [activeSection, setActiveSection] = useState("")
+
+  // Função para fazer scroll suave
+  const handleScroll = (id) => {
+    const section = document.getElementById(id)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
+  // Detecta qual seção está visível
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["sobre", "compliance", "contato"]
+      let currentSection = ""
+
+      for (const section of sections) {
+        const el = document.getElementById(section)
+        if (el) {
+          const rect = el.getBoundingClientRect()
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            currentSection = section
+            break
+          }
+        }
+      }
+
+      setActiveSection(currentSection)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
     <footer className="bg-black text-white py-10">
       <div className="container mx-auto px-6">
@@ -14,12 +51,17 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex space-x-6 text-gray-400">
-            <a href="#compliance" className="hover:text-white transition-colors">
-              Compliance
-            </a>
-            <a href="#contato" className="hover:text-white transition-colors">
-              Contato
-            </a>
+            {["sobre", "compliance", "contato"].map((item) => (
+              <button
+                key={item}
+                onClick={() => handleScroll(item)}
+                className={`hover:text-white transition-colors ${
+                  activeSection === item ? "text-white font-bold underline" : ""
+                }`}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </button>
+            ))}
           </div>
 
           {/* Redes Sociais */}
@@ -42,4 +84,3 @@ export default function Footer() {
     </footer>
   )
 }
-
