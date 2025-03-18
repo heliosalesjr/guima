@@ -61,14 +61,14 @@ export default function Navbar() {
         </div>
 
         {/* Menu Desktop */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 oswald">
           {["home", "sobre", "compliance", "contato", "mapa"].map((item) => (
             <button
               key={item}
               onClick={() => handleScroll(item)}
-              className={`text-gray-600 hover:text-gray-900 transition-all text-lg tracking-wider ${
+              className={`text-slate-700 hover:text-slate-900 transition-all text-lg tracking-widest ${
                 activeSection === item
-                  ? "font-black underline decoration-blue-500 decoration-4"
+                  ? " underline decoration-blue-500 decoration-4"
                   : ""
               }`}
             >
