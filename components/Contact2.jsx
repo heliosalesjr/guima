@@ -63,7 +63,7 @@ export function Contact2() {
                     {/* Segunda coluna com o formulário, sem alterações */}
                     <div className="flex flex-col justify-center items-center">
                         <form onSubmit={handleSubmit} className="space-y-6 w-full">
-                            <h2 className="text-3xl font-black mb-4 text-center text-slate-700">Fale conosco</h2>
+                            <h2 className="text-3xl font-black mb-4 text-center text-slate-700 oswald uppercase tracking-wide">Fale conosco</h2>
                             <div className='input-box'>
                                 <label className="block mb-1">Nome</label>
                                 <input type="text" className="field w-full p-2 border rounded-md" placeholder="Seu nome" name="name" required />

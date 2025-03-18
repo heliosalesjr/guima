@@ -37,15 +37,15 @@ const WhoWeAre = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-semibold text-gray-800">
+          <h2 className="text-3xl font-semibold text-slate-800 text-center md:text-left">
             <span className="font-black">Edmar Diogo </span>
-            <span className="text-sky-700 font-bold">|</span>
-            <span className="text-blue-700">Cofundador e CEO</span>
+            <span className="text-blue-700 font-bold">|</span>
+            <span className="text-blue-700"> Cofundador e CEO</span>
           </h2>
 
           {/* Botão com espaçamento responsivo */}
-          <div className="space-y-8 lg:space-y-20">
-            <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-slate-500">
+          <div className="space-y-8 lg:space-y-20 ">
+            <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-slate-500 mx-auto md:mx-0">
               <Linkedin size={20} />
               <span>Conecte-se</span>
             </button>

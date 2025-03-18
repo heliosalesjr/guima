@@ -11,8 +11,10 @@ export default function About() {
       >
         {/* Left Section */}
         <div className="lg:w-1/2">
-          <h3 className="text-blue-600 font-black uppercase mb-6 text-2xl font-oswald">Quem somos</h3>
-          <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-6">
+          <h3 className="text-blue-700 font-black uppercase mb-6 text-2xl font-oswald tracking-wide">Quem somos</h3>
+          <h2 
+          
+            className=" text-4xl font-bold text-slate-800 leading-snug mb-6">
             Uma empresa criada por pessoas, onde as pessoas: 
           </h2>
           <p className="text-slate-600 text-xl leading-relaxed">
@@ -44,7 +46,8 @@ export default function About() {
           ].map((item) => (
             <div key={item.id} className="flex items-start gap-6">
               <div>
-                <p className="text-xl font-semibold text-gray-900 mb-2 font-oswald">{item.title}</p>
+              <p className="text-xl font-black text-blue-700 mb-2 oswald tracking-wide">{item.title}</p>
+
                 <p className="text-slate-600 text-lg leading-relaxed">{item.description}</p>
               </div>
             </div>
@@ -52,7 +55,7 @@ export default function About() {
         </div>
       </section>
       
-      <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-8 text-center pb-16">Nossos Parceiros</h3>
+      <h3 className="text-4xl md:text-4xl font-bold mt-12 mb-8 text-center pb-16 oswald text-blue-700 tracking-wide">Nossos Parceiros</h3>
 
       {/* Container das Imagens */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">

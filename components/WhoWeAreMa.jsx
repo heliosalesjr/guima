@@ -37,15 +37,15 @@ const WhoWeAreMa = () => {
           viewport={{ once: true }}
           className="lg:w-1/2 space-y-8 flex flex-col justify-center items-end text-right"
         >
-          <h2 className="text-3xl font-semibold text-gray-800">
+          <h2 className="text-3xl font-semibold text-gray-800 text-center md:text-right">
             <span className="font-black">Marina Guimarães Nassim</span>
-            <span className="text-slate-500 font-bold"> |</span>
+            <span className="text-blue-700 font-bold"> |</span>
             <span className="text-blue-700"> Sócia Administradora</span>
           </h2>
 
           {/* Botão do LinkedIn alinhado à direita */}
           <div className="w-full flex justify-end">
-            <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-slate-500">
+            <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-slate-500 mx-auto md:mx-0">
               <Linkedin size={20} />
               <span>Conecte-se</span>
             </button>
