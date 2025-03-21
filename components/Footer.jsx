@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Redes Sociais */}
           <div className="flex space-x-4 mt-6 md:mt-0">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-2xl">
+            <a href="https://www.linkedin.com/company/guima-representa%C3%A7%C3%A3o-e-distribui%C3%A7%C3%A3o/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-2xl">
               <FaLinkedin />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-2xl">

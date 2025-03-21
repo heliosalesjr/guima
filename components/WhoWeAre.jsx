@@ -45,10 +45,13 @@ const WhoWeAre = () => {
 
           {/* Botão com espaçamento responsivo */}
           <div className="space-y-8 lg:space-y-20 ">
-            <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-slate-500 mx-auto md:mx-0">
-              <Linkedin size={20} />
-              <span>Conecte-se</span>
-            </button>
+          <button
+  onClick={() => window.open("https://www.linkedin.com/in/edmardiogo/", "_blank")}
+  className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-slate-500 mx-auto md:mx-0"
+>
+  <Linkedin size={20} />
+  <span>Conecte-se</span>
+</button>
 
             {/* Cards com espaçamento menor em mobile */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

@@ -11,13 +11,13 @@ export default function About() {
       >
         {/* Left Section */}
         <div className="lg:w-1/2">
-          <h3 className="text-blue-700 font-semibold uppercase mb-6 text-4xl font-oswald tracking-wide">Quem somos</h3>
+          <h3 className="text-slate-500 font-semibold uppercase mb-6 text-4xl font-oswald tracking-wide">Quem somos</h3>
           <h2 
           
-            className=" text-4xl font-bold text-slate-800 leading-snug mb-6">
+            className="sm:text-4-xl text-2xl font-bold text-slate-800 leading-snug mb-6">
             Uma empresa criada por pessoas, onde as pessoas: 
           </h2>
-          <p className="text-slate-600 text-xl leading-relaxed">
+          <p className="text-slate-600 md:text-xl text-lg leading-relaxed">
             Sejam alunos, professores, gestores educacionais e seus diretores são o mais importante de cada parceria. 
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function About() {
         </div>
       </section>
       
-      <h3 className="text-4xl md:text-4xl font-bold mt-12 mb-8 text-center pb-16 oswald text-blue-700 uppercase  tracking-wide">Nossos Parceiros</h3>
+      <h3 className="text-4xl md:text-4xl font-bold mt-12 mb-8 text-center pb-16 oswald text-slate-500 uppercase  tracking-wide">Nossos Parceiros</h3>
 
       {/* Container das Imagens */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
