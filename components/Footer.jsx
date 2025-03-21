@@ -69,7 +69,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/company/guima-representa%C3%A7%C3%A3o-e-distribui%C3%A7%C3%A3o/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-2xl">
               <FaLinkedin />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-2xl">
+            <a href="https://www.instagram.com/guimarep" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-2xl">
               <FaInstagram />
             </a>
           </div>

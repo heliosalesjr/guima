@@ -46,7 +46,7 @@ const WhoWeAreMa = () => {
           {/* Botão do LinkedIn alinhado à direita */}
           <div className="w-full flex justify-end">
             <button
-                        onClick={() => window.open("https://www.linkedin.com/in/edmardiogo/", "_blank")}
+                        onClick={() => window.open("https://www.linkedin.com/company/guima-representa%C3%A7%C3%A3o-e-distribui%C3%A7%C3%A3o/posts/?feedView=all", "_blank")}
                         className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-slate-500 mx-auto md:mx-0"
                       >
                         <Linkedin size={20} />

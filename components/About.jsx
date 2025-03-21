@@ -58,21 +58,11 @@ export default function About() {
       <h3 className="text-4xl md:text-4xl font-bold mt-12 mb-8 text-center pb-16 oswald text-slate-500 uppercase  tracking-wide">Nossos Parceiros</h3>
 
       {/* Container das Imagens */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-3xl mx-auto">
         {/* Imagem 1 */}
-        <div className="flex justify-center">
-          <a href="https://planetanoticia.com.br/" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/img/planeta_logo.svg"
-              alt="Parceiro 1"
-              width={200}
-              height={200}
-              className="rounded-lg"
-            />
-          </a>
-        </div>
+        
         {/* Imagem 2 */}
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <a href="https://beieducacao.com.br/" target="_blank" rel="noopener noreferrer">
             <Image
               src="/img/bei_logo.png"
@@ -89,7 +79,7 @@ export default function About() {
             <Image
               src="/img/moderna_logo_transpa.png"
               alt="Parceiro 3"
-              width={300}
+              width={400}
               height={200}
               className="rounded-lg object-contain"
             />
