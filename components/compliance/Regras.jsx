@@ -107,7 +107,7 @@ export default function Regras() {
             Você pode baixar o nosso documento de Compliance completo clicando no botão:
           </p>
           <a 
-            href="/compliance_Guima.pdf" 
+            href="/programa_de_compliance_Guima.pdf" 
             download 
             className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition-colors"
           >
