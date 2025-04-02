@@ -113,6 +113,9 @@ export default function Regras() {
           >
             Download
           </a>
+
+          <p className="text-sm text-slate-300 mt-8">Em caso de dúvida ou suspeita da prática de atos de Corrupção, entre em contato com o canal:{" "}
+          <spam className="text-blue-400 underline">ouvidoriaguima@gmail.com.br</spam></p>
         </div>
 
     </div>
