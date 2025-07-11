@@ -103,20 +103,35 @@ export default function Regras() {
       </div>
       
       <div className="flex flex-col items-center justify-center text-center p-4">
-          <p className="text-lg mb-4 text-white pt-16">
-            Você pode baixar o nosso documento de Compliance completo clicando no botão:
-          </p>
-          <a 
-            href="/programa_de_compliance_Guima.pdf" 
-            download 
-            className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition-colors"
-          >
-            Download
-          </a>
+  <p className="text-lg mb-4 text-white pt-16 pb-8">
+    Você pode baixar o nossos documentos de Compliance completos clicando nos botões abaixo:
+  </p>
 
-          <p className="text-sm text-slate-300 mt-8">Em caso de dúvida ou suspeita da prática de atos de Corrupção, entre em contato com o canal:{" "}
-          <spam className="text-blue-400 underline">ouvidoriaguima@gmail.com.br</spam></p>
+    {/* Botões lado a lado */}
+    <div className="flex flex-row flex-wrap justify-center gap-4">
+      <a 
+        href="/Programa_de_Compliance_Guima_Educacional_assinado.pdf" 
+        download 
+        className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition-colors"
+      >
+        Compliance e Código de Conduta
+      </a>
+
+      <a 
+        href="/Programa_de_Compliance_Guima_Rep_Dist_assinado.pdf" 
+        download 
+        className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-700 transition-colors"
+      >
+        Compliance Representantes e Distribuidores
+      </a>
         </div>
+
+        <p className="text-sm text-slate-300 mt-8">
+          Em caso de dúvida ou suspeita da prática de atos de Corrupção, entre em contato com o canal:{" "}
+          <span className="text-blue-400 underline">ouvidoriaguima@gmail.com.br</span>
+        </p>
+      </div>
+
 
     </div>
     
