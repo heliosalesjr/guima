@@ -38,7 +38,7 @@ export default function Regras() {
   return (
     <div>
       <h2 className="text-4xl text-center font-bold text-white leading-snug mb-6 oswald tracking-wide uppercase">Compromisso com Ética e Compliance</h2>
-      <p className="text-white max-w-5xl text-center mx-auto text-lg pb-16 leading-relaxed">Nossa empresa segue rigorosamente as leis de compliance brasileiras, garantindo a total conformidade com as normas e regulamentos. Atuamos com transparência, integridade e respeito às legislações vigentes, promovendo um ambiente ético e seguro para nossos clientes, colaboradores e parceiros.</p>
+      <p className="text-white max-w-5xl text-center mx-auto text-lg pb-16 leading-relaxed">Nossas empresas seguem rigorosamente as diretrizes brasileiras de compliance, atuando com transparência, integridade e respeito às legislações vigentes. Promovemos um ambiente ético e seguro para nossos clientes, colaboradores e parceiros, reforçando nosso compromisso com a conformidade e a responsabilidade corporativa.</p>
       
       <div className="relative max-w-5xl mx-auto h-[400px] flex flex-wrap overflow-hidden regras-container">
         {items.map((item, index) => {
@@ -104,7 +104,7 @@ export default function Regras() {
       
       <div className="flex flex-col items-center justify-center text-center p-4">
   <p className="text-lg mb-4 text-white pt-16 pb-8">
-    Você pode baixar o nossos documentos de Compliance completos clicando nos botões abaixo:
+    Você pode acessar os documentos completos de Compliance clicando nos botões abaixo:
   </p>
 
     {/* Botões lado a lado */}
@@ -114,7 +114,7 @@ export default function Regras() {
         download 
         className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition-colors"
       >
-        Compliance e Código de Conduta
+        Guima Educacional
       </a>
 
       <a 
@@ -122,13 +122,13 @@ export default function Regras() {
         download 
         className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-700 transition-colors"
       >
-        Compliance Representantes e Distribuidores
+        Guima Representação e Distribuição
       </a>
         </div>
 
         <p className="text-sm text-slate-300 mt-8">
           Em caso de dúvida ou suspeita da prática de atos de Corrupção, entre em contato com o canal:{" "}
-          <span className="text-blue-400 underline">ouvidoriaguima@gmail.com.br</span>
+          <span className="text-blue-400 underline">ouvidoriaguima@gmail.com</span>
         </p>
       </div>
 
