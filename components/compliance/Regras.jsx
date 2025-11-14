@@ -110,7 +110,7 @@ export default function Regras() {
     {/* Botões lado a lado */}
     <div className="flex flex-row flex-wrap justify-center gap-4">
       <a 
-        href="/Programa_de_Compliance_Guima_Educacional_assinado.pdf" 
+        href="/Programa_de_Compliance_Guima_Educacional.docx_assinado.pdf" 
         download 
         className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition-colors"
       >
