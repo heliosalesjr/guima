@@ -61,7 +61,7 @@ export default function Navbar() {
         </div>
 
         {/* Menu Desktop */}
-        <div className="hidden md:flex space-x-6 oswald">
+        <div className="hidden md:flex space-x-6 font-display">
           {["home", "sobre", "compliance", "contato", "mapa"].map((item) => (
             <button
               key={item}
@@ -86,14 +86,14 @@ export default function Navbar() {
       {/* Menu Mobile */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg absolute top-16 left-0 right-0">
-          <div className="flex flex-col items-center space-y-4 py-4">
+          <div className="flex flex-col items-center space-y-4 py-4 font-display">
             {["home", "sobre", "compliance", "contato", "mapa"].map((item) => (
               <button
                 key={item}
                 onClick={() => handleScroll(item)}
                 className={`text-gray-600 hover:text-gray-900 transition-all text-lg tracking-wider ${
                   activeSection === item
-                    ? "font-black underline decoration-blue-500 decoration-4"
+                    ? "font-bold underline decoration-blue-500 decoration-4"
                     : ""
                 }`}
               >

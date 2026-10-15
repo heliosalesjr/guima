@@ -37,7 +37,7 @@ export default function Regras() {
 
   return (
     <div>
-      <h2 className="text-4xl text-center font-bold text-white leading-snug mb-6 oswald tracking-wide uppercase">Compromisso com Ética e Compliance</h2>
+      <h2 className="text-4xl text-center font-bold text-white leading-snug mb-6 font-display tracking-wide uppercase">Compromisso com Ética e Compliance</h2>
       <p className="text-white max-w-5xl text-center mx-auto text-lg pb-16 leading-relaxed">Nossas empresas seguem rigorosamente as diretrizes brasileiras de compliance, atuando com transparência, integridade e respeito às legislações vigentes. Promovemos um ambiente ético e seguro para nossos clientes, colaboradores e parceiros, reforçando nosso compromisso com a conformidade e a responsabilidade corporativa.</p>
       
       <div className="relative max-w-5xl mx-auto h-[400px] flex flex-wrap overflow-hidden regras-container">
@@ -73,7 +73,7 @@ export default function Regras() {
               
               {/* Título */}
               <motion.h2
-                className="absolute oswald flex items-center justify-center w-full h-full text-white text-xl font-bold transition-all duration-500 tracking-wide"
+                className="absolute font-display flex items-center justify-center w-full h-full text-white text-xl font-bold transition-all duration-500 tracking-wide"
                 animate={{
                   opacity: isShrunk ? 0 : 1,
                   scale: isActive ? 0 : 1,

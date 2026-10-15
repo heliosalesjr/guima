@@ -9,7 +9,7 @@ export default {
 	theme: {
 	  extend: {
 		fontFamily: {
-		  oswald: ["Oswald", "sans-serif"], // Adicionando a fonte Oswald
+		  display: ["var(--font-display)", "Arial Narrow", "Arial", "sans-serif"], // Fonte de destaque
 		},
 		colors: {
 		  background: "hsl(var(--background))",
