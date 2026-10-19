@@ -19,7 +19,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-[46ch] text-lg leading-relaxed text-slate-600">
-              Distribuímos e representamos as melhores soluções do mercado de educação
+              Distribuímos as melhores soluções do mercado de educação
               básica brasileira, com milhares de usuários e resultados comprovados.
             </p>
 
