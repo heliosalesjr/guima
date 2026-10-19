@@ -1,5 +1,5 @@
 import WhoWeAre from "./WhoWeAre";
-import WhoWeAreMa from "./WhoWeAreMa";
+import LinkedInPost from "./LinkedInPost";
 
 import React from 'react'
 
@@ -7,7 +7,7 @@ function Team() {
   return (
     <div id="sobre">
         <WhoWeAre />
-        <WhoWeAreMa />
+        <LinkedInPost />
     </div>
   )
 }
