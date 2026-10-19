@@ -1,9 +1,9 @@
 "use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import "./Regras.css"; // Importe o arquivo CSS
 
-const items = [
+import { useState } from "react";
+import Image from "next/image";
+
+const ITENS = [
   {
     image: "/img/concorrentes.jpg",
     title: "Concorrentes",
@@ -12,12 +12,12 @@ const items = [
   {
     image: "/img/fornecedores.jpg",
     title: "Fornecedores",
-    text: "Os fornecedores da Guima devem demonstrar: plena capacidade técnica para executar o que propõe, a prática de preços totalmente adequados, conduta profissional absolutamente idônea, baseada no cumprimento de leis e de altos padrões éticos.",
+    text: "Os fornecedores da Guima devem demonstrar plena capacidade técnica para executar o que propõem, a prática de preços totalmente adequados e conduta profissional absolutamente idônea, baseada no cumprimento de leis e de altos padrões éticos.",
   },
   {
     image: "/img/agentespublicos.jpg",
-    title: "Agentes Públicos",
-    text: "A Guima, no ato das pessoas físicas que a representam, estão proibidas de prometer, oferecer ou dar, direta ou indiretamente, qualquer pagamento ou outra vantagem indevida a agente público, a terceiro a ele relacionado ou a uma pessoa física ou jurídica privada, visando à obtenção de qualquer favorecimento ou expectativa de favorecimento.",
+    title: "Agentes públicos",
+    text: "A Guima, no ato das pessoas físicas que a representam, está proibida de prometer, oferecer ou dar, direta ou indiretamente, qualquer pagamento ou outra vantagem indevida a agente público, a terceiro a ele relacionado ou a uma pessoa física ou jurídica privada, visando à obtenção de qualquer favorecimento ou expectativa de favorecimento.",
   },
   {
     image: "/img/terceiros.jpeg",
@@ -27,113 +27,140 @@ const items = [
   {
     image: "/img/legal.jpg",
     title: "Embasamento legal",
-    text: "LEI No 12.846/2013 (Lei Anticorrupção) e e DECRETO No 11.129/2022 (decreto regulamentador). Ainda: LEI No 12.813/2013 – Lei de conflito de Interesses, LEI No 14.133/20121 – Nova Lei de Licitações e Contratos Administrativos, CÓDIGO PENAL – Decreto-Lei no 2.848, de 7 de dezembro de 1940, LEI No 8.429/1992 – Lei de Improbidade Administrativa e DECRETO No 10.889/2021, que regulamenta as audiências de agentes públicos.",
+    text: "Lei nº 12.846/2013 (Lei Anticorrupção) e Decreto nº 11.129/2022 (decreto regulamentador). Ainda: Lei nº 12.813/2013 (conflito de interesses), Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos), Código Penal (Decreto-Lei nº 2.848/1940), Lei nº 8.429/1992 (Improbidade Administrativa) e Decreto nº 10.889/2021, que regulamenta as audiências de agentes públicos.",
+  },
+];
+
+const DOCUMENTOS = [
+  
+  {
+    href: "/Programa_de_Compliance_Guima_Rep_Dist_assinado.pdf",
+    label: "Guima Distribuição",
   },
 ];
 
 export default function Regras() {
-  const [selected, setSelected] = useState(null);
-  const [hovered, setHovered] = useState(null);
+  const [ativo, setAtivo] = useState(null);
 
   return (
     <div>
-      <h2 className="text-4xl text-center font-bold text-white leading-snug mb-6 font-display tracking-wide uppercase">Compromisso com Ética e Compliance</h2>
-      <p className="text-white max-w-5xl text-center mx-auto text-lg pb-16 leading-relaxed">Nossas empresas seguem rigorosamente as diretrizes brasileiras de compliance, atuando com transparência, integridade e respeito às legislações vigentes. Promovemos um ambiente ético e seguro para nossos clientes, colaboradores e parceiros, reforçando nosso compromisso com a conformidade e a responsabilidade corporativa.</p>
-      
-      <div className="relative max-w-5xl mx-auto h-[400px] flex flex-wrap overflow-hidden regras-container">
-        {items.map((item, index) => {
-          const isActive = selected === index;
-          const isShrunk = selected !== null && !isActive;
-          const width = isActive ? "60%" : isShrunk ? "10%" : "20%";
+      {/* Cabeçalho — mesmo padrão do Hero e do "Quem somos" */}
+      <p className="font-display flex items-center gap-3 text-xs md:text-sm uppercase tracking-[0.18em] text-blue-400">
+        <span className="h-0.5 w-7 bg-blue-400" aria-hidden="true" />
+        Compliance
+      </p>
+
+      <h2 className="font-display mt-5 max-w-[18ch] text-3xl md:text-4xl lg:text-[2.6rem] font-bold leading-[1.08] tracking-wide text-balance text-white">
+        Compromisso com ética e compliance
+      </h2>
+
+      <p className="mt-6 max-w-[58ch] text-lg leading-relaxed text-zinc-300">
+        Seguimos rigorosamente as diretrizes brasileiras de compliance, atuando com
+        transparência, integridade e respeito às legislações vigentes. Promovemos um
+        ambiente ético e seguro para clientes, colaboradores e parceiros.
+      </p>
+
+      {/* Painéis: no desktop expandem ao passar o mouse; no mobile ficam abertos */}
+      <div className="mt-12 flex flex-col gap-3 md:h-[440px] md:flex-row md:gap-2.5">
+        {ITENS.map((item, i) => {
+          const isAtivo = ativo === i;
 
           return (
-            <motion.div
-              key={index}
-              className={`relative h-full cursor-pointer transition-all duration-500 ease-in-out ${
-                isActive ? "active" : ""
-              }`}
-              style={{ width }}
-              onClick={() => setSelected(isActive ? null : index)}
-              onMouseEnter={() => setHovered(index)}
-              onMouseLeave={() => setHovered(null)}
+            <button
+              key={item.title}
+              type="button"
+              onMouseEnter={() => setAtivo(i)}
+              onMouseLeave={() => setAtivo(null)}
+              onFocus={() => setAtivo(i)}
+              onBlur={() => setAtivo(null)}
+              onClick={() => setAtivo(isAtivo ? null : i)}
+              aria-expanded={isAtivo}
+              style={{ flexGrow: isAtivo ? 2.4 : 1 }}
+              className="group relative flex min-w-0 flex-col overflow-hidden rounded-xl bg-white/5 text-left ring-1 ring-white/10 transition-[flex-grow] duration-500 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 md:block md:basis-0 md:bg-transparent"
             >
-              {/* Imagem de fundo */}
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-all duration-500"
-                style={{ backgroundImage: `url(${item.image})` }}
-              />
-              
-              {/* Overlay escuro */}
-              <motion.div
-                className="absolute inset-0 bg-black transition-all duration-500"
-                animate={{
-                  opacity: isActive ? 0.5 : hovered === index ? 0.2 : 0.5, 
-                }}
-              />
-              
-              {/* Título */}
-              <motion.h2
-                className="absolute font-display flex items-center justify-center w-full h-full text-white text-xl font-bold transition-all duration-500 tracking-wide"
-                animate={{
-                  opacity: isShrunk ? 0 : 1,
-                  scale: isActive ? 0 : 1,
-                }}
-                initial={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0 }}
-              >
-                {item.title}
-              </motion.h2>
-              
-              {/* Texto (só aparece no ativo) */}
-              <AnimatePresence>
-                {isActive && (
-                  <motion.p
-                    className="absolute bottom-5 left-5 right-5 text-white transition-opacity"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.3 } }}
-                    exit={{ opacity: 0 }}
-                  >
-                    {item.text}
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.div>
+              {/* No mobile a foto é uma faixa no topo e o texto vai em fundo
+                  sólido embaixo. Do md para cima ela passa a cobrir o painel
+                  inteiro e o conteúdo se sobrepõe a ela. */}
+              <div className="relative h-36 w-full shrink-0 overflow-hidden md:absolute md:inset-0 md:h-full">
+                <Image
+                  src={item.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 420px"
+                  className="object-cover"
+                />
+                {/* Véu único: o mesmo em repouso e com o mouse em cima. O hover
+                    não altera cor nenhuma do card, só abre o texto. */}
+                <div
+                  className="absolute inset-0 bg-zinc-950/25 md:bg-transparent md:bg-gradient-to-t md:from-zinc-950/90 md:via-zinc-950/40 md:to-transparent"
+                  aria-hidden="true"
+                />
+              </div>
+
+              <div className="relative flex flex-col p-5 md:absolute md:inset-0 md:justify-end">
+                {/* O título fica sempre visível, aberto ou fechado */}
+                <h3 className="font-display text-lg font-bold uppercase leading-tight tracking-[0.04em] text-white">
+                  {item.title}
+                </h3>
+
+                <span
+                  className={`mt-3 h-0.5 w-7 shrink-0 bg-blue-400 transition-opacity duration-300 ${
+                    isAtivo ? "opacity-100" : "opacity-0 md:opacity-60"
+                  }`}
+                  aria-hidden="true"
+                />
+
+                <p
+                  className={`mt-3 text-sm leading-relaxed text-zinc-200 transition-all duration-500 md:mt-0 md:overflow-hidden ${
+                    isAtivo
+                      ? "md:mt-3 md:max-h-72 md:opacity-100"
+                      : "md:max-h-0 md:opacity-0"
+                  }`}
+                >
+                  {item.text}
+                </p>
+              </div>
+            </button>
           );
         })}
       </div>
-      
-      <div className="flex flex-col items-center justify-center text-center p-4">
-  <p className="text-lg mb-4 text-white pt-16 pb-8">
-    Você pode acessar os documentos completos de Compliance clicando nos botões abaixo:
-  </p>
 
-    {/* Botões lado a lado */}
-    <div className="flex flex-row flex-wrap justify-center gap-4">
-      <a 
-        href="/Programa_de_Compliance_Guima_Educacional.docx_assinado.pdf" 
-        download 
-        className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition-colors"
-      >
-        Guima Educacional
-      </a>
+      {/* Documentos */}
+      <div className="mt-14 border-t border-white/10 pt-10">
+        <p className="max-w-[56ch] text-zinc-300">
+          Acesse nosso Programa de Compliance completo:
+         
+        </p>
 
-      <a 
-        href="/Programa_de_Compliance_Guima_Rep_Dist_assinado.pdf" 
-        download 
-        className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-700 transition-colors"
-      >
-        Guima Representação e Distribuição
-      </a>
+        <div className="mt-6 flex flex-wrap gap-3">
+          {DOCUMENTOS.map((doc, i) => (
+            <a
+              key={doc.href}
+              href={doc.href}
+              download
+              className={`font-display rounded-lg px-6 py-3 font-semibold tracking-wide transition-colors ${
+                i === 0
+                  ? "bg-blue-600 text-white hover:bg-blue-500"
+                  : "border border-white/25 text-white hover:bg-white/10"
+              }`}
+            >
+              {doc.label}
+            </a>
+          ))}
         </div>
 
-        <p className="text-sm text-slate-300 mt-8">
-          Em caso de dúvida ou suspeita da prática de atos de Corrupção, entre em contato com o canal:{" "}
-          <span className="text-blue-400 underline">ouvidoriaguima@gmail.com</span>
+        <p className="mt-8 text-sm text-zinc-400">
+          Em caso de dúvida ou suspeita da prática de atos de corrupção, entre em
+          contato com o canal{" "}
+          <a
+            href="mailto:ouvidoriaguima@gmail.com"
+            className="text-blue-400 underline underline-offset-4 transition-colors hover:text-blue-300"
+          >
+            ouvidoriaguima@gmail.com
+          </a>
+          .
         </p>
       </div>
-
-
     </div>
-    
   );
 }

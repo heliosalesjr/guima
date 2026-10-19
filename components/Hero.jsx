@@ -11,7 +11,7 @@ export default function Hero() {
           <div className="order-2 lg:order-1">
             <p className="font-display flex items-center gap-3 text-xs md:text-sm uppercase tracking-[0.18em] text-blue-700">
               <span className="h-0.5 w-7 bg-blue-700" aria-hidden="true" />
-              Representação e distribuição
+              Guima Distribuição
             </p>
 
             <h1 className="font-display mt-5 max-w-[14ch] text-4xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.05] tracking-wide text-balance text-slate-900">
@@ -41,14 +41,17 @@ export default function Hero() {
 
           {/* Painel com a foto */}
           <div className="order-1 lg:order-2">
-            <div className="relative aspect-[16/11] overflow-hidden rounded-2xl shadow-[0_18px_44px_rgba(15,23,42,0.17)] lg:aspect-[4/5]">
+            <div className="group relative aspect-[16/11] overflow-hidden rounded-2xl shadow-[0_18px_44px_rgba(15,23,42,0.17)] transition-shadow duration-500 ease-out hover:shadow-[0_26px_60px_rgba(15,23,42,0.26)] lg:aspect-[4/5]">
+              {/* Em coluna única o recorte 16/11 é raso e o selo "25+" cobriria as
+                  mãos: o 90% desce a janela na foto para levantá-las. No lg o
+                  enquadramento volta ao centro, exatamente como estava. */}
               <Image
-                src="/img/hands2.jpg"
-                alt="Aperto de mãos entre dois profissionais"
+                src="/img/guima_handshake_2.png"
+                alt="Aperto de mãos entre dois profissionais sob o selo da Guima emoldurado na parede"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover"
+                className="object-cover object-[50%_90%] transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04] lg:object-center"
               />
               <div className="absolute inset-x-0 bottom-0 flex items-baseline gap-2.5 bg-slate-900/90 px-5 py-4">
                 <b className="font-display text-2xl font-bold text-white">25+</b>

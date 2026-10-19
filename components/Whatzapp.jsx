@@ -13,7 +13,7 @@ export default function FloatingWhatsAppButton() {
   return (
     <motion.button
       onClick={handleClick}
-      className="fixed bottom-8 right-8 bg-green-500 rounded-full p-4 shadow-lg hover:bg-green-600 transition-colors duration-300"
+      className="fixed bottom-8 right-8 z-50 bg-green-500 rounded-full p-4 shadow-lg hover:bg-green-600 transition-colors duration-300"
       aria-label="Contact us on WhatsApp"
       initial={{ scale: 1 }}
       animate={{ scale: [1, 1.1, 1] }}

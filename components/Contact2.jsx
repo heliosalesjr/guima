@@ -55,7 +55,7 @@ export function Contact2() {
                 <div className="absolute inset-0 bg-sky-800 opacity-40 z-10"></div>
                 
                 {/* Conteúdo */}
-                <div id="contato" className="relative z-20 max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+                <div className="relative z-20 max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                     
                     {/* Primeira coluna (h1 vazio) */}
                     <h1 className="text-transparent">.</h1>
