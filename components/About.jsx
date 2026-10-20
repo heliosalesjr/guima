@@ -36,6 +36,16 @@ const PARCEIROS = [
     height: 46,
     className: "max-h-6 max-w-[80px]",
   },
+  {
+    // Lockup empilhado (ícone + "proesc" + "GOV"), quase quadrado: limitado
+    // pela altura para ficar com peso visual parecido com o da BEI.
+    nome: "Proesc Gov",
+    href: "https://proesc.com/proescgov/",
+    src: "/img/proesc.png",
+    width: 112,
+    height: 100,
+    className: "max-h-12 max-w-[56px]",
+  },
 ];
 
 export default function About() {
